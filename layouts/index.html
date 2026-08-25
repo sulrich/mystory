@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+	{{ range .Params.sections }}
+		{{ $partial := .partial }}
+		{{ if .page }}
+			{{ with site.GetPage .page }}{{ partial $partial . }}{{ end }}
+		{{ else }}
+			{{ partial $partial $ }}
+		{{ end }}
+	{{ end }}
+
+	{{ partial "footer" . }}
+
+{{ end }}

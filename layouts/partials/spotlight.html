@@ -1,0 +1,13 @@
+<!-- Spotlight -->
+<section class="spotlight {{ .Params.style }}"{{ with .Params.id }} id="{{ . }}"{{ end }}>
+	<div class="content">
+		{{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+		{{ .Content }}
+		{{ with .Params.button }}<ul class="actions stacked">
+			<li><a href="{{ .link }}" class="button">{{ .label }}</a></li>
+		</ul>{{ end }}
+	</div>
+	{{ with .Params.image }}<div class="image">
+		<img src="{{ . }}" alt="" />
+	</div>{{ end }}
+</section>

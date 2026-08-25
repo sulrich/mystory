@@ -1,0 +1,12 @@
+<!-- Items -->
+<section class="wrapper style1 align-center"{{ with .Params.id }} id="{{ . }}"{{ end }}>
+	<div class="inner">
+		{{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+		{{ .Content }}
+		<div class="items {{ .Params.style }}">
+			{{ range .Params.items }}
+				{{ partial "item" . }}
+			{{ end }}
+		</div>
+	</div>
+</section>

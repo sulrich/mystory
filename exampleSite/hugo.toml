@@ -1,0 +1,30 @@
+baseURL = "/"
+title = "MyStory"
+theme = "mystory"
+relativeURLs = true
+disableKinds = ["taxonomy", "section"]
+
+[params]
+  description = "A modular, front matter-driven responsive one-page theme for Hugo."
+  author = "MyStory"
+  copyright = "MyStory example site"
+  favicon = true
+  # demo = true loads demo.js: click-to-cycle-modifier chrome for the
+  # elements reference section. Leave it off for production sites.
+  demo = true
+
+  [params.social]
+    github = "https://github.com/caressofsteel/hugo-story"
+    twitter = "https://twitter.com"
+    bluesky = "https://bsky.app"
+    instagram = "https://instagram.com"
+    linkedin = "https://linkedin.com"
+    email = "you@example.com"
+
+  [params.asset]
+    fontawesome_css = ["css/fontawesome-all.min.css"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

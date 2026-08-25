@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<!--
+	MyStory — a modular, front matter-driven responsive one-page theme for Hugo.
+	Ported from Story by HTML5UP via hugo-story by CaressOfSteel.
+	Licensed under the Creative Commons Attribution 3.0 License.
+-->
+<html lang="{{ site.Language.Lang | default "en" }}">
+	
+	{{ partial "head" . }}
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper" class="divided">
+            {{- block "main" . }}{{- end }}
+		<!-- Wrapper -->
+		</div>
+		
+		{{ partial "scripts" . }}
+
+	</body>
+</html>

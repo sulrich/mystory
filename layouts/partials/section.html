@@ -1,0 +1,6 @@
+<!-- Section (plain wrapper for markdown-driven content) -->
+<section class="wrapper {{ .Params.style | default "style1 align-left" }}"{{ with .Params.id }} id="{{ . }}"{{ end }}>
+	<div class="inner">
+		{{ .Content }}
+	</div>
+</section>

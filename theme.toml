@@ -1,0 +1,21 @@
+name = "MyStory"
+description = "A modular, front matter-driven responsive one-page theme for Hugo. Fork of hugo-story: homepage sections are composed from content front matter instead of data files."
+
+min_version = "0.67.3 Extended"
+tags = ["blog","clean","html5up","modular","one-page","portfolio","responsive"]
+features = ["font-awesome","favicon","one-page","responsive","sass","scss","front-matter-sections"]
+
+license = "Creative Commons"
+licenselink = "https://github.com/caressofsteel/hugo-story/blob/master/LICENSE"
+
+# Forked from hugo-story; upstream credit retained per CC-BY 3.0.
+[original]
+    author = "caressofsteel"
+    homepage = "https://github.com/caressofsteel/hugo-story"
+    repo = "https://github.com/caressofsteel/hugo-story"
+
+# Original design
+[design]
+    author = "HTML5UP"
+    homepage = "https://html5up.net"
+    repo = "https://html5up.net/story"

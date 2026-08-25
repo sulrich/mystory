@@ -1,0 +1,14 @@
+<!-- Banner -->
+<section class="banner {{ .Params.style }}">
+	<div class="content">
+		{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+		{{ with .Params.subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }}
+		{{ .Content }}
+		{{ with .Params.button }}<ul class="actions stacked">
+			<li><a href="{{ .link }}" class="button primary large wide smooth-scroll-middle">{{ .label }}</a></li>
+		</ul>{{ end }}
+	</div>
+	{{ with .Params.image }}<div class="image">
+		<img src="{{ . }}" alt="{{ $.Title }}" />
+	</div>{{ end }}
+</section>
