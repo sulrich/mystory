@@ -294,13 +294,16 @@
 		@include orientation(portrait) {
 			@include vendor('flex-direction', 'column-reverse');
 			text-align: center;
+			@include content-prose-left;
 
 			.content {
 				@include vendor('display', 'flex');
 				@include vendor('flex-direction', 'column');
 				@include vendor('justify-content', 'center');
 				width: 100%;
-				max-width: 100%;
+				// Same cap as the landscape column, so body copy doesn't run
+				// the full window width in a tall-but-wide window.
+				max-width: (_size(inner) * 0.75);
 			}
 
 			.image {
