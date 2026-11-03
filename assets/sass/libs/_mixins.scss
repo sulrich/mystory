@@ -74,3 +74,19 @@
 	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
 
 }
+/// Left-aligns body copy (paragraphs and content lists) that sits directly
+/// in a section's .content, leaving headings, subtitles (p.major) and
+/// buttons with whatever alignment they inherit. Used where banners and
+/// spotlights center everything in portrait/mobile layouts. Lists are made
+/// block-level so they span the content width instead of centering as an
+/// inline-block (see components/_list.scss).
+@mixin content-prose-left {
+	.content {
+		> p:not(.major),
+		> ul:not(.icons):not(.actions),
+		> ol {
+			display: block;
+			text-align: left;
+		}
+	}
+}
