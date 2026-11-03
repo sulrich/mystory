@@ -75,7 +75,8 @@ them as placeholders, not as the theme's actual content, when editing
 
 When adding or modifying a section partial, keep its front matter keys
 consistent with the documented shapes in `README.md` (banner: `title`,
-`subtitle`, `image`, `button`; spotlight: `title`, `image`, `button`;
+`subtitle`, `image`, `image_credit`, `button`; spotlight: `title`,
+`image`, `image_credit`, `button`;
 gallery: `pictures: [{image, thumb, title, content, button}]`; items:
 `items: [{name, content, style}]`). These are the theme's public API for
 adopting projects — changing a key name is a breaking change and should be

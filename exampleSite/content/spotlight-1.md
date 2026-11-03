@@ -4,6 +4,7 @@ headless: true
 style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
 image: "images/spotlight01.jpg"
+image_credit: "Photo: HTML5UP"
 button:
   label: "Learn More"
   link: "#"

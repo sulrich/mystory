@@ -24,6 +24,10 @@
 	<noscript><link rel="stylesheet" href="{{ ($noscript | minify).RelPermalink }}" /></noscript>
 	{{end}}
 
+	<!-- Google Analytics: set [services.googleAnalytics] id in the site config.
+	     Production builds only, so `hugo server` sessions aren't tracked. -->
+	{{ if hugo.IsProduction }}{{ partial "google_analytics.html" . }}{{ end }}
+
 	<!-- FontAwesome CSS -->
 	{{ range .Site.Params.asset.fontawesome_css -}}
 		<link rel="stylesheet" href="{{ . | absURL }}">

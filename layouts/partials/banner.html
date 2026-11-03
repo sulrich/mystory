@@ -10,5 +10,6 @@
 	</div>
 	{{ with .Params.image }}<div class="image">
 		<img src="{{ . }}" alt="{{ $.Title }}" />
+		{{ with $.Params.image_credit }}<p class="image-credit">{{ . | safeHTML }}</p>{{ end }}
 	</div>{{ end }}
 </section>
