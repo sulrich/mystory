@@ -91,6 +91,7 @@ title: "..."        # <h1>
 style: "style1 orient-left content-align-left image-position-right fullscreen ..."
 subtitle: "..."     # HTML allowed
 image: "images/....jpg"
+image_credit: 'Photo: <a href="...">Name</a>'  # optional caption on the image; HTML allowed
 button: { label: "...", link: "#first" }
 ```
 
@@ -101,6 +102,7 @@ title: "..."        # <h2>
 style: "style1 orient-right ..."
 id: "first"
 image: "images/....jpg"
+image_credit: "Photo: Name"   # optional caption on the image; HTML allowed
 button: { label: "...", link: "#" }
 ```
 
@@ -135,6 +137,21 @@ Static showcases of the typography/form/table elements and the full
 modifier reference. No front matter; add them to `sections` without a
 `page`. Set `params.demo = true` to load `demo.js`, which makes the
 modifier examples clickable (demo chrome — leave it off in production).
+
+## Analytics
+
+Google Analytics (GA4) uses Hugo's standard service config. Set the
+measurement ID in the site's `hugo.toml` and the theme's `head` partial
+emits the gtag snippet on every page:
+
+```toml
+[services.googleAnalytics]
+  id = "G-XXXXXXXXXX"
+```
+
+No ID, no snippet. It only renders in production builds (`hugo`), not under
+`hugo server`, so local previews don't pollute the numbers. Hugo's
+`[privacy.googleAnalytics]` settings (e.g. `disable = true`) are honored.
 
 ## Assets
 

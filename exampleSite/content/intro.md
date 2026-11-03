@@ -4,6 +4,7 @@ headless: true
 style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
 subtitle: 'MyStory is a Hugo port of <a target="_blank" href="https://html5up.net/story">Story</a> by HTML5UP, released under <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a>.'
 image: "images/banner.jpg"
+image_credit: 'Photo: <a href="https://html5up.net/story">HTML5UP</a>'
 button:
   label: "Get Started"
   link: "#first"
