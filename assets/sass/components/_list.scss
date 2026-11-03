@@ -42,6 +42,19 @@
 		}
 	}
 
+	// Content lists are left-aligned so wrapped lines hang under their
+	// bullet. As inline-blocks they follow the inherited alignment as a
+	// unit: flush left in left-aligned content, shrink-wrapped and centered
+	// where the theme forces text-align: center (e.g. portrait/mobile
+	// spotlights). Icon and action lists are excluded; they lay out their
+	// own items and rely on inherited centering.
+	ul:not(.icons):not(.actions),
+	ol {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+	}
+
 	dl {
 		margin: 0 0 _size(element-margin) 0;
 

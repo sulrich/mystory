@@ -5,6 +5,23 @@
 	This Hugo theme is licensed under the Creative Commons Attribution 3.0 License.
 */
 
+/* Spotlight (prose alignment) */
+
+	// In portrait the spotlights force text-align: center on everything.
+	// Keep the heading (and buttons) centered there, but set body copy
+	// flush left: paragraphs and content lists (which otherwise center
+	// as a block, see _list.scss) span the full content width.
+	@mixin spotlight-prose-left {
+		.content {
+			> p,
+			> ul:not(.icons):not(.actions),
+			> ol {
+				display: block;
+				text-align: left;
+			}
+		}
+	}
+
 /* Spotlight (transitions) */
 
 	.spotlight {
@@ -301,6 +318,7 @@
 			@include orientation(portrait) {
 				@include vendor('flex-direction', 'column-reverse');
 				text-align: center !important;
+				@include spotlight-prose-left;
 
 				.content {
 					width: 100%;
@@ -443,6 +461,7 @@
 			@include vendor('align-items', 'center');
 			@include vendor('flex-direction', 'column-reverse');
 			text-align: center !important;
+			@include spotlight-prose-left;
 
 			.content {
 				width: 34rem;
@@ -577,6 +596,7 @@
 			@include vendor('align-items', 'center');
 			@include vendor('flex-direction', 'column-reverse');
 			text-align: center !important;
+			@include spotlight-prose-left;
 
 			.content {
 				width: 34rem;
@@ -1041,6 +1061,7 @@
 		@include vendor('align-items', 'center');
 		@include vendor('flex-direction', 'column-reverse');
 		text-align: center !important;
+		@include spotlight-prose-left;
 
 		.content {
 			width: 34rem;
